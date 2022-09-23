@@ -1,0 +1,709 @@
+object FPrincipalBackup: TFPrincipalBackup
+  Left = 281
+  Top = 181
+  Caption = 
+    '[D2010] Sistema de Backup Autom'#225'tico - Firebird e Interbase 6.0 ' +
+    'Build 11/11/2020 - ZIP'
+  ClientHeight = 642
+  ClientWidth = 1004
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PopupMenu = PopupMenu1
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object reStatus: TRichEdit
+    Left = 0
+    Top = 0
+    Width = 1004
+    Height = 191
+    Align = alTop
+    Color = 14811135
+    Ctl3D = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpFixed
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 623
+    Width = 1004
+    Height = 19
+    Panels = <
+      item
+        Text = 
+          'Contato Conectiva: suporte_conectiva@hotmail.com - www.conectiva' +
+          'soft.com.br - FreeWare'
+        Width = 50
+      end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 226
+    Width = 1004
+    Height = 397
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 2
+    object GroupBox2: TGroupBox
+      Left = 8
+      Top = 8
+      Width = 464
+      Height = 185
+      Caption = '1 - Monitorando o(s) seguinte(s) Banco(s) de Dados'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 5
+        Top = 21
+        Width = 80
+        Height = 13
+        Caption = 'Base de Dados 1'
+      end
+      object Label3: TLabel
+        Left = 5
+        Top = 61
+        Width = 80
+        Height = 13
+        Caption = 'Base de Dados 2'
+      end
+      object Label4: TLabel
+        Left = 5
+        Top = 101
+        Width = 80
+        Height = 13
+        Caption = 'Base de Dados 3'
+      end
+      object Label5: TLabel
+        Left = 5
+        Top = 141
+        Width = 80
+        Height = 13
+        Caption = 'Base de Dados 4'
+      end
+      object eBase1: TEdit
+        Left = 5
+        Top = 36
+        Width = 295
+        Height = 19
+        Ctl3D = False
+        Enabled = False
+        ParentCtl3D = False
+        TabOrder = 0
+      end
+      object eBase2: TEdit
+        Left = 5
+        Top = 76
+        Width = 295
+        Height = 19
+        Ctl3D = False
+        Enabled = False
+        ParentCtl3D = False
+        TabOrder = 1
+      end
+      object eBase3: TEdit
+        Left = 5
+        Top = 116
+        Width = 295
+        Height = 19
+        Ctl3D = False
+        Enabled = False
+        ParentCtl3D = False
+        TabOrder = 2
+      end
+      object eBase4: TEdit
+        Left = 5
+        Top = 156
+        Width = 295
+        Height = 19
+        Ctl3D = False
+        Enabled = False
+        ParentCtl3D = False
+        TabOrder = 3
+      end
+      object BitBtn5: TBitBtn
+        Left = 303
+        Top = 33
+        Width = 159
+        Height = 25
+        Caption = 'Escolher local e fazer backup'
+        DoubleBuffered = True
+        ParentDoubleBuffered = False
+        TabOrder = 4
+        OnClick = BitBtn5Click
+      end
+      object BitBtn6: TBitBtn
+        Left = 303
+        Top = 73
+        Width = 159
+        Height = 25
+        Caption = 'Escolher local e fazer backup'
+        DoubleBuffered = True
+        ParentDoubleBuffered = False
+        TabOrder = 5
+        OnClick = BitBtn6Click
+      end
+      object BitBtn7: TBitBtn
+        Left = 303
+        Top = 113
+        Width = 159
+        Height = 25
+        Caption = 'Escolher local e fazer backup'
+        DoubleBuffered = True
+        ParentDoubleBuffered = False
+        TabOrder = 6
+        OnClick = BitBtn7Click
+      end
+      object BitBtn8: TBitBtn
+        Left = 303
+        Top = 154
+        Width = 159
+        Height = 25
+        Caption = 'Escolher local e fazer backup'
+        DoubleBuffered = True
+        ParentDoubleBuffered = False
+        TabOrder = 7
+        OnClick = BitBtn8Click
+      end
+    end
+    object GroupBox3: TGroupBox
+      Left = 474
+      Top = 8
+      Width = 363
+      Height = 185
+      Caption = '3 - Locais para criar a(s) c'#243'pia(s)'
+      Ctl3D = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 1
+      object Label2: TLabel
+        Left = 5
+        Top = 21
+        Width = 98
+        Height = 13
+        Caption = 'Pasta para Backup 1'
+      end
+      object Label6: TLabel
+        Left = 5
+        Top = 61
+        Width = 98
+        Height = 13
+        Caption = 'Pasta para Backup 2'
+      end
+      object Label7: TLabel
+        Left = 5
+        Top = 101
+        Width = 98
+        Height = 13
+        Caption = 'Pasta para Backup 3'
+      end
+      object Label8: TLabel
+        Left = 5
+        Top = 141
+        Width = 98
+        Height = 13
+        Caption = 'Pasta para Backup 4'
+      end
+      object eDirBackup1: TEdit
+        Left = 5
+        Top = 36
+        Width = 353
+        Height = 19
+        Enabled = False
+        TabOrder = 0
+      end
+      object eDirBackup2: TEdit
+        Left = 5
+        Top = 76
+        Width = 353
+        Height = 19
+        Enabled = False
+        TabOrder = 1
+      end
+      object eDirBackup3: TEdit
+        Left = 5
+        Top = 116
+        Width = 353
+        Height = 19
+        Enabled = False
+        TabOrder = 2
+      end
+      object eDirBackup4: TEdit
+        Left = 5
+        Top = 156
+        Width = 353
+        Height = 19
+        Enabled = False
+        TabOrder = 3
+      end
+    end
+    object GroupBox1: TGroupBox
+      Left = 8
+      Top = 276
+      Width = 953
+      Height = 118
+      Caption = 
+        '7 - Para alterar estas configura'#231#245'es clique em "Editar Configura' +
+        #231#245'es"'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      object clbSemana: TCheckListBox
+        Left = 5
+        Top = 15
+        Width = 126
+        Height = 100
+        Enabled = False
+        ItemHeight = 13
+        Items.Strings = (
+          'Domingo'
+          'Segunda'
+          'Ter'#231'a'
+          'Quarta'
+          'Quinta'
+          'Sexta'
+          'S'#225'bado')
+        TabOrder = 0
+      end
+      object clbHorarios: TCheckListBox
+        Left = 135
+        Top = 15
+        Width = 426
+        Height = 100
+        Columns = 5
+        Enabled = False
+        ItemHeight = 13
+        Items.Strings = (
+          '00:00'
+          '01:00'
+          '02:00'
+          '03:00'
+          '04:00'
+          '05:00'
+          '06:00'
+          '07:00'
+          '08:00'
+          '09:00'
+          '10:00'
+          '11:00'
+          '12:00'
+          '13:00'
+          '14:00'
+          '15:00'
+          '16:00'
+          '17:00'
+          '18:00'
+          '19:00'
+          '20:00'
+          '21:00'
+          '22:00'
+          '23:00')
+        Sorted = True
+        TabOrder = 1
+      end
+      object Memo2: TMemo
+        Left = 564
+        Top = 15
+        Width = 385
+        Height = 100
+        Ctl3D = False
+        Lines.Strings = (
+          
+            'Fa'#231'a a manuten'#231#227'o dos computadores envolvidos na rede periodicam' +
+            'ente.'
+          'Um banco de dados pode ficar corrompido nos seguintes casos:'
+          '- Queda s'#250'bita de energia'
+          '- Danos no disco'
+          '- Ataque de v'#237'rus'
+          '- Mem'#243'ria defeituosa')
+        ParentCtl3D = False
+        TabOrder = 2
+      end
+    end
+    object BitBtn2: TBitBtn
+      Left = 840
+      Top = 13
+      Width = 163
+      Height = 37
+      Hint = 'Clique para editar as configura'#231#245'es'
+      Caption = '4 - &Editar Configura'#231#245'es'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FF00FFFF00FF
+        DADADADADADADADADADADADADADADADADADADADADADADADAE4E4E4FF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFC1C1C1E7E7E7E7E7E7E7E7E7E7E7E7E7E7E7E7
+        E7E7E7E7E7E7E7E7D0D0D1D2D2D3FF00FFFF00FFFF00FFFF00FFDADADAE7E7E7
+        FFFFFFFFFFFF8F8E8ED0D0D0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBCBCBDFF00
+        FFFF00FFFF00FFFF00FFDADADAE7E7E7FFFFFFFFFFFF6D6D6D4D4D4E8484849F
+        9F9FE2E2E2FFFFFFFFFFFFBCBCBDFF00FFFF00FFFF00FFFF00FFDADADAE7E7E7
+        FFFFFFFFFFFFA1A1A17A797ACBCACABAAA98B6701DCAC3BCFFFFFFBCBCBDFF00
+        FFFF00FFFF00FFFF00FFDADADAE7E7E7FFFFFFFFFFFFF8F8F8B2B1B1C1AF9AE0
+        800DCA7209C07011C9C2BABCBCBDFF00FFFF00FFFF00FFFF00FFDADADAE7E7E7
+        FFFFFFFFFFFFFFFFFF9A9186EA922DD98119EF8506CA7209C070119B948DFF00
+        FFFF00FFFF00FFFF00FFDADADAE7E7E7FFFFFFFFFFFFFFFFFFECECECBA8342FA
+        9A29D98119EF8506CA7209BC6C0EC5BFB6FF00FFFF00FFFF00FFDADADAE7E7E7
+        FFFFFFFFFFFFFFFFFFFFFFFFEEEEEEBA8342FA9A29D98119EF8506CA7209BD6F
+        0FC4BEB5FF00FFFF00FFD7D7D7BFBFBFD0D0D0D0D0D0D0D0D0ECECECFFFFFFEF
+        EFEFBB8343FA9A29D98119EF8506C8710A917554C1C1C1FF00FFFF00FF929292
+        E6E6E7ECECECECECECBFBFC0ECECECFFFFFFEFEFF0BB8343FA9A29D7811AA47E
+        525A5A5B58585AFF00FFFF00FFFF00FF9C9C9CF8F8F8FEFEFEECECECD0D0D0FF
+        FFFFFFFFFFF0F0F0BA8444A5845E5A5A5B42424369696BFF00FFFF00FFFF00FF
+        FF00FF9C9C9CF8F8F8ECECECD0D0D0FFFFFFFFFFFFFFFFFFF1F1F16161624242
+        4369696BFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF9C9C9CE6E6E7D0D0D0FF
+        FFFFFFFFFFFFFFFFFFFFFFB3B3B49C9C9DFF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FF929292BFBFBFE7E7E7E7E7E7E7E7E7D0D0D1D2D2D3FF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFD7D7D7DA
+        DADADADADADADADAE4E4E4FF00FFFF00FFFF00FFFF00FFFF00FF}
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      OnClick = BitBtn2Click
+    end
+    object BitBtn1: TBitBtn
+      Left = 840
+      Top = 49
+      Width = 163
+      Height = 37
+      Hint = 'Clique para editar as configura'#231#245'es'
+      Caption = '5 - &Fazer Backup Agora'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFF0BF8FE99843FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0C190FFB545FFAD3FE8
+        9B44FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFF0C595FFBD4CFFAE40FFAE40FFB243E79E46FFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1CEA2FCC154FFB446FFB446FFB446FF
+        B446FFB84AE7A249FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2D5AD
+        FAC65BFFBB4CFFBB4CEEAB4AE6A54BFFBB4CFFBB4CFFBF50E7A74CFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFF9C963FFC253FFC253E9AE4EFFFFFFFFFFFFE5
+        A84EFFC253FFC253FFC658E6AB4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECB753
+        FFCA5AE7B052FFFFFFFFFFFFFFFFFFFFFFFFE5AE52FFCA5AFFCA5AFFCD60E5AF
+        53FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEED29CFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFE4B355FFD160FFD160FFD467E4B456FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE4B858FFD766FFD7
+        66FFDA6EE4B859FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE3BC5AFFDD6BFFDD6BFFE074EDD69CFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE3BF
+        5DFFE16FFFE16FF3E5BEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEDAA1F0E1B1FFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      OnClick = BitBtn1Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 840
+      Top = 133
+      Width = 163
+      Height = 37
+      Hint = 'Clique para editar as configura'#231#245'es'
+      Caption = '7 - Finalizar Aplicativo'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        36050000424D3605000000000000360400002800000010000000100000000100
+        08000000000000010000000000000000000000010000000100000005F0000005
+        F1000005F2000005F2000005F1000005EF000005EC000005E7000005E3000005
+        DF000005DC000005D8000005D4000005D0000005CD000005C8000005C1000005
+        BA000005B7000005B7000005B7000005B6000005B6000005B6000005B6000005
+        B6000005B5000005B5000005B4000005B3000106B0000206AD000307A6000509
+        9D00070B94000A0D8B000D10800010137400151766001A1B56001C1E50001F20
+        49002223420025263B00292934002D2D2D002E2E2E002F2F2F00303030003131
+        3100323232003333330034343400353535003636360037373700383838003939
+        39003A3A3A003B3B3B003C3C3C003D3D3D003E3E3E003F3F3F00404040004141
+        4100424242004343430044444400454545004646460047474700484848004949
+        49004A4A4A004B4B4B004C4C4C004D4D4D004E4E4E004F4F4F00505050005151
+        5100525252005353530054545400555555005656560057575700585858005959
+        59005A5A5A005B5B5B005C5C5C005D5D5D005E5E5E005F5F5F00606060006161
+        6100626262006363630064646400656565006666660067676700686868006969
+        69006A6A6A006B6B6B006C6C6C006D6D6D006E6E6E006F6F6F00707070007171
+        7100727272007373730074747400757575007676760077777700787878007979
+        79007A7A7A007B7B7B007C7C7C007D7D7D007E7E7E007F7F7F00808080008181
+        8100828282008383830084848400858585008686860087878700888888008989
+        89008A8A8A008B8B8B008C8C8C008D8D8D008E8E8E008F8F8F00909090009191
+        9100929292009393930094949400959595009696960097979700989898009999
+        99009A9A9A009B9B9B009C9C9C009D9D9D009E9E9E009F9F9F00A0A0A000A1A1
+        A100A2A2A200A3A3A300A4A4A400A5A5A500A6A6A600A7A7A700A8A8A800A9A9
+        A900AAAAAA00ABABAB00ACACAC00ADADAD00AEAEAE00AFAFAF00B0B0B000B1B1
+        B100B2B2B200B3B3B300B4B4B400B5B5B500B6B6B600B7B7B700B8B8B800B9B9
+        B900BABABA00BBBBBB00BCBCBC00BDBDBD00BEBEBE00BFBFBF00C0C0C000C1C1
+        C100C2C2C200C3C3C300C4C4C400C5C5C500C6C6C600C7C7C700C8C8C800C9C9
+        C900CACACA00D1B2D100D994D900E46CE400F139F100F917F900FD07FD00FE01
+        FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+        FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+        FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+        FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+        FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+        FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00E9E9E9E9E9E9
+        E9E9E9E9E9E9E9E91212E91212E9E9E9E9E9E9E9E9E9E91212E9E9121212E9E9
+        E9E9E9E9E9E91212E9E9E912151212E9E9E9E9E9E91212E9E9E9E9E90B111212
+        E9E9E9E91212E9E9E9E9E9E9E9E9121215E9151212E9E9E9E9E9E9E9E9E9E915
+        0F0F0E1CE9E9E9E9E9E9E9E9E9E9E9E910100BE9E9E9E9E9E9E9E9E9E9E9E915
+        0B0E0B07E9E9E9E9E9E9E9E9E9E9080B0CE9E90805E9E9E9E9E9E9E9E9030B05
+        E9E9E9E90303E9E9E9E9E9E9030303E9E9E9E9E9E90303E9E9E9E9030303E9E9
+        E9E9E9E9E9E9E903E9E9030303E9E9E9E9E9E9E9E9E9E9E9E9E90303E9E9E9E9
+        E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9E9}
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      OnClick = BitBtn3Click
+    end
+    object BitBtn4: TBitBtn
+      Left = 840
+      Top = 85
+      Width = 163
+      Height = 37
+      Hint = 'Clique para editar as configura'#231#245'es'
+      Caption = '6 - &Restaurar Backup'
+      DoubleBuffered = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFF0BF8FE99843FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0C190FFB545FFAD3FE8
+        9B44FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFF0C595FFBD4CFFAE40FFAE40FFB243E79E46FFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1CEA2FCC154FFB446FFB446FFB446FF
+        B446FFB84AE7A249FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2D5AD
+        FAC65BFFBB4CFFBB4CEEAB4AE6A54BFFBB4CFFBB4CFFBF50E7A74CFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFF9C963FFC253FFC253E9AE4EFFFFFFFFFFFFE5
+        A84EFFC253FFC253FFC658E6AB4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECB753
+        FFCA5AE7B052FFFFFFFFFFFFFFFFFFFFFFFFE5AE52FFCA5AFFCA5AFFCD60E5AF
+        53FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEED29CFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFE4B355FFD160FFD160FFD467E4B456FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE4B858FFD766FFD7
+        66FFDA6EE4B859FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFE3BC5AFFDD6BFFDD6BFFE074EDD69CFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE3BF
+        5DFFE16FFFE16FF3E5BEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEDAA1F0E1B1FFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+      ParentDoubleBuffered = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+      OnClick = BitBtn4Click
+    end
+    object GroupBox4: TGroupBox
+      Left = 8
+      Top = 192
+      Width = 953
+      Height = 83
+      Caption = 'Situa'#231#227'o dos Drivers destino - Espa'#231'o usado na(s) unidade(s):'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 7
+      object Gauge1: TGauge
+        Left = 20
+        Top = 17
+        Width = 930
+        Height = 14
+        Progress = 0
+      end
+      object labelletra1: TLabel
+        Left = 8
+        Top = 18
+        Width = 11
+        Height = 13
+        Caption = 'C:'
+      end
+      object Labelletra2: TLabel
+        Left = 8
+        Top = 34
+        Width = 11
+        Height = 13
+        Caption = 'C:'
+      end
+      object Gauge2: TGauge
+        Left = 20
+        Top = 33
+        Width = 930
+        Height = 14
+        Progress = 0
+      end
+      object LabelLetra3: TLabel
+        Left = 8
+        Top = 50
+        Width = 11
+        Height = 13
+        Caption = 'C:'
+      end
+      object Gauge3: TGauge
+        Left = 20
+        Top = 49
+        Width = 930
+        Height = 14
+        Progress = 0
+      end
+      object LabelLetra4: TLabel
+        Left = 8
+        Top = 66
+        Width = 11
+        Height = 13
+        Caption = 'C:'
+      end
+      object Gauge4: TGauge
+        Left = 20
+        Top = 65
+        Width = 930
+        Height = 14
+        Progress = 0
+      end
+    end
+  end
+  object Memo1: TMemo
+    Left = 0
+    Top = 191
+    Width = 1004
+    Height = 35
+    Align = alClient
+    Color = 14811135
+    Ctl3D = True
+    DoubleBuffered = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentDoubleBuffered = False
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 3
+  end
+  object Timer: TTimer
+    Enabled = False
+    Interval = 10000
+    OnTimer = TimerTimer
+    Left = 232
+    Top = 125
+  end
+  object Backup: TIBBackupService
+    ServerName = 'localhost'
+    Protocol = TCP
+    Params.Strings = (
+      'user_name=SYSDBA'
+      'password=masterkey')
+    LoginPrompt = False
+    TraceFlags = []
+    Verbose = True
+    BlockingFactor = 0
+    Options = [NoGarbageCollection]
+    Left = 75
+    Top = 75
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 504
+    Top = 80
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object MostrarAplicao1: TMenuItem
+      Caption = 'Mostrar Aplica'#231#227'o'
+      OnClick = MostrarAplicao1Click
+    end
+  end
+  object Timerclose: TTimer
+    Interval = 100
+    OnTimer = TimercloseTimer
+    Left = 320
+    Top = 125
+  end
+  object ApplicationEvents1: TApplicationEvents
+    OnException = ApplicationEvents1Exception
+    Left = 640
+    Top = 48
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cGET_ACP
+    Properties.Strings = (
+      'codepage=ISO8859_1')
+    TransactIsolationLevel = tiReadCommitted
+    Port = 0
+    Database = 'c:\conectivasoft\dados\x.fdb'
+    User = 'SYSDBA'
+    Password = 'masterkey'
+    Protocol = 'firebird-2.5'
+    LibraryLocation = 'C:\CONECTIVASOFT\fbclient.dll'
+    Left = 76
+    Top = 115
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 112
+    Top = 120
+  end
+end
